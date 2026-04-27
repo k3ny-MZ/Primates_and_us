@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Primates & Us: An Anthropology Exhibit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="#" onclick="showPage('home')"></a>
+  <div class="nav-links">
+    <a href="#" onclick="showPage('home')" id="nav-home" class="active">Home</a>
+    <a href="#" onclick="showPage('exhibit')" id="nav-exhibit">Exhibit</a>
+    <a href="#" onclick="showPage('about')" id="nav-about">About</a>
+  </div>
+</nav>
+
+<div id="page-home" class="page active">
+  <section class="home-hero">
+    <div class="hero-eyebrow">🌿 Anthropology 110 Final Project</div>
+    <h1 class="hero-title">Primates <em>&</em> Us</h1>
+    <p class="hero-subtitle">A simple digital exhibit about chimpanzees, bonobos, gorillas, and humans.</p>
+    <div class="hero-cta">
+      <button class="btn-primary" onclick="showPage('exhibit')">Explore the Exhibit →</button>
+      <button class="btn-outline" onclick="showPage('about')">About This Project</button>
+    </div>
+  </section>
+
+  <section class="intro-band">
+    <div>
+      <h2>Humans are primates too</h2>
+      <p>Humans are different in a lot of ways, but we are not totally separate from nature. We belong to the primate order, along with chimpanzees, bonobos, gorillas, monkeys, and lemurs.</p>
+      <p>For this project, I compared humans with a few other primates to show how anthropology helps explain cooperation, parenting, conflict, learning, and communication.</p>
+    </div>
+  </section>
+
+  <div class="stats-row">
+    <div class="stat-item">
+      <span class="stat-number">98%+</span>
+      <div class="stat-label">DNA similarity with chimps and bonobos</div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">6 to 7M</span>
+      <div class="stat-label">Years since humans and chimps split</div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">500+</span>
+      <div class="stat-label">Primate species alive today</div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">60%</span>
+      <div class="stat-label">Primate species threatened</div>
+    </div>
+  </div>
+</div>
+
+<div id="page-exhibit" class="page">
+  <section class="exhibit-header">
+    <h1>The Exhibit</h1>
+    <p>Choose a primate to learn how it connects to humans and anthropology.</p>
+  </section>
+
+  <main class="primate-grid">
+    <button class="primate-card" onclick="showAnimal('chimp')">
+      <div class="card-image">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/015_Chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg?width=1000" alt="Chimpanzee sitting in a forest" />
+        <span class="card-badge">Great Ape</span>
+      </div>
+      <div class="card-body">
+        <h2>Chimpanzees</h2>
+        <p>Chimpanzees are close relatives to humans. They use tools, learn from each other, and live in complex social groups.</p>
+        <div class="card-footer">
+          <span class="dna-badge">🧬 98%+ similar</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </div>
+    </button>
+
+    <button class="primate-card" onclick="showAnimal('bonobo')">
+      <div class="card-image">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Bonobo_009.jpg?width=1000" alt="Bonobo sitting in grass" />
+        <span class="card-badge">Great Ape</span>
+      </div>
+      <div class="card-body">
+        <h2>Bonobos</h2>
+        <p>Bonobos are also close relatives to humans. They are known for cooperation, social bonds, and female-centered groups.</p>
+        <div class="card-footer">
+          <span class="dna-badge">🧬 98%+ similar</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </div>
+    </button>
+
+    <button class="primate-card" onclick="showAnimal('gorilla')">
+      <div class="card-image">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Male_gorilla_in_SF_zoo.jpg?width=1000" alt="Adult male gorilla standing in grass" />
+        <span class="card-badge">Great Ape</span>
+      </div>
+      <div class="card-body">
+        <h2>Gorillas</h2>
+        <p>Gorillas show how family groups, parenting, protection, and leadership matter in primate life.</p>
+        <div class="card-footer">
+          <span class="dna-badge">🧬 98%+ similar</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </div>
+    </button>
+
+    <button class="primate-card" onclick="showAnimal('human')">
+      <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1000&q=80" alt="Group of people spending time together" />
+        <span class="card-badge">Homo sapiens</span>
+      </div>
+      <div class="card-body">
+        <h2>Humans</h2>
+        <p>Humans are primates with language, culture, art, technology, and large societies.</p>
+        <div class="card-footer">
+          <span class="dna-badge">🧬 100% primate</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </div>
+    </button>
+  </main>
+</div>
+
+<div id="page-animal" class="page">
+  <div id="detail-chimp" class="animal-detail">
+    <div class="animal-hero" style="background-image: url('https://commons.wikimedia.org/wiki/Special:FilePath/016_Alpha_male_chimpanzee_walking_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg?width=1600')">
+      <div class="animal-hero-content">
+        <span class="species-label">Pan troglodytes, Great Ape</span>
+        <h1>Chimpanzees</h1>
+        <p>Tools, learning, and social behavior.</p>
+      </div>
+    </div>
+
+    <div class="detail-body">
+      <div class="detail-main">
+        <section>
+          <h2>Who are chimpanzees?</h2>
+          <p>Chimpanzees are one of the closest living relatives to humans. They live in parts of Central and West Africa and usually form communities with many social relationships inside them.</p>
+          <p>They are important to anthropology because they show that tool use, learning, and social behavior are not only human traits. Jane Goodall’s work helped change how scientists thought about chimpanzees.</p>
+        </section>
+
+        <figure class="detail-img">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Chimpanzee%2C_Kigale%2C_Uganda_%2815320845832%29.jpg?width=1000" alt="Close-up of a chimpanzee" />
+          <figcaption>Chimpanzees are known for intelligence, problem-solving, and learning from other group members.</figcaption>
+        </figure>
+
+        <section>
+          <h2>Tool use and learning</h2>
+          <p>Chimpanzees use sticks, leaves, stones, and other objects as tools. For example, some chimpanzees use sticks to collect termites, and others use stones to crack nuts. These behaviors are learned socially, which means young chimpanzees can pick them up by watching older ones.</p>
+          <p>This matters because it shows a simple form of culture. Different chimpanzee groups can have different habits, even though they are the same species.</p>
+        </section>
+
+        <section>
+          <h2>Social life</h2>
+          <p>Chimpanzees groom each other, build alliances, compete for status, and sometimes have serious conflict with other groups. Their social life is not random. It depends on memory, relationships, and strategy.</p>
+          <p>This helps anthropologists think about the roots of human politics, friendship, cooperation, and conflict.</p>
+        </section>
+
+        <div class="anthro-highlight">
+          <h3>🎓 Anthropology Connection</h3>
+          <p>Chimpanzees connect to biological anthropology because they help us compare human and non-human primate behavior. They make us think about where tool use, social learning, cooperation, and conflict may have come from in human evolution.</p>
+        </div>
+      </div>
+
+      <aside class="detail-sidebar">
+        <div class="sticky-sidebar">
+          <div class="fact-card">
+            <h3>Quick Facts</h3>
+            <div class="fact-item"><div class="fact-icon">📍</div><div class="fact-text"><strong>Habitat</strong>Central and West African forests and savannas</div></div>
+            <div class="fact-item"><div class="fact-icon">⚖️</div><div class="fact-text"><strong>Size</strong>Medium-sized great ape, usually smaller than gorillas</div></div>
+            <div class="fact-item"><div class="fact-icon">👥</div><div class="fact-text"><strong>Social group</strong>Large communities that split and rejoin during the day</div></div>
+            <div class="fact-item"><div class="fact-icon">🍽️</div><div class="fact-text"><strong>Diet</strong>Mostly fruit, leaves, insects, and sometimes meat</div></div>
+            <div class="fact-item"><div class="fact-icon">⚠️</div><div class="fact-text"><strong>Status</strong>Endangered</div></div>
+          </div>
+          <div class="dna-meter">
+            <h3>DNA Similarity to Humans</h3>
+            <div class="dna-percent">98%+</div>
+            <div class="dna-label">very close genetic relationship</div>
+            <div class="dna-bar"><div class="dna-fill" style="width:98%"></div></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <div class="back-nav"><a class="back-btn" href="#" onclick="showPage('exhibit')">← Back to Exhibit</a></div>
+  </div>
+
+  <div id="detail-bonobo" class="animal-detail">
+    <div class="animal-hero" style="background-image: url('https://commons.wikimedia.org/wiki/Special:FilePath/Bonobo_009.jpg?width=1600')">
+      <div class="animal-hero-content">
+        <span class="species-label">Pan paniscus, Great Ape</span>
+        <h1>Bonobos</h1>
+        <p>Cooperation and social bonding.</p>
+      </div>
+    </div>
+
+    <div class="detail-body">
+      <div class="detail-main">
+        <section>
+          <h2>Who are bonobos?</h2>
+          <p>Bonobos are closely related to both humans and chimpanzees. They live only in the Democratic Republic of Congo, mostly in forest areas south of the Congo River.</p>
+          <p>Bonobos are sometimes compared to chimpanzees because they are close relatives, but their social behavior can look very different. They are often known for cooperation, social bonds, and female-centered groups.</p>
+        </section>
+
+        <figure class="detail-img">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Apeldoorn_Apenheul_zoo_Bonobo.jpg?width=1000" alt="Bonobo resting near a wooden post" />
+          <figcaption>Bonobos help show that primate social life is not only about competition. Cooperation also matters.</figcaption>
+        </figure>
+
+        <section>
+          <h2>Cooperation and bonding</h2>
+          <p>Bonobos are known for strong social relationships. Female bonobos often form alliances, and those alliances can shape the whole group. This is interesting because it gives anthropologists another way to think about power and relationships in primate societies.</p>
+          <p>They also show empathy and social support. These behaviors matter because they connect to questions about how cooperation and care may have developed in human evolution.</p>
+        </section>
+
+        <section>
+          <h2>Why they matter</h2>
+          <p>Bonobos show that primate behavior is not only about aggression or competition. Cooperation, trust, and social bonding also matter.</p>
+          <p>That makes them useful for studying humans because human societies also depend on cooperation and relationships.</p>
+        </section>
+
+        <div class="anthro-highlight">
+          <h3>🎓 Anthropology Connection</h3>
+          <p>Bonobos connect to anthropology because they help us study cooperation, empathy, and social structure. They remind us that human behavior has many sides, including conflict, but also care and cooperation.</p>
+        </div>
+      </div>
+
+      <aside class="detail-sidebar">
+        <div class="sticky-sidebar">
+          <div class="fact-card">
+            <h3>Quick Facts</h3>
+            <div class="fact-item"><div class="fact-icon">📍</div><div class="fact-text"><strong>Habitat</strong>Congo Basin forests in the Democratic Republic of Congo</div></div>
+            <div class="fact-item"><div class="fact-icon">👩‍👧</div><div class="fact-text"><strong>Social structure</strong>Often female-centered with strong social bonds</div></div>
+            <div class="fact-item"><div class="fact-icon">🍎</div><div class="fact-text"><strong>Diet</strong>Mostly fruit, leaves, seeds, and some insects</div></div>
+            <div class="fact-item"><div class="fact-icon">⚠️</div><div class="fact-text"><strong>Status</strong>Endangered</div></div>
+          </div>
+          <div class="dna-meter">
+            <h3>DNA Similarity to Humans</h3>
+            <div class="dna-percent">98%+</div>
+            <div class="dna-label">very close genetic relationship</div>
+            <div class="dna-bar"><div class="dna-fill" style="width:98%"></div></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <div class="back-nav"><a class="back-btn" href="#" onclick="showPage('exhibit')">← Back to Exhibit</a></div>
+  </div>
+
+  <div id="detail-gorilla" class="animal-detail">
+    <div class="animal-hero" style="background-image: url('https://commons.wikimedia.org/wiki/Special:FilePath/Male_gorilla_in_SF_zoo.jpg?width=1600')">
+      <div class="animal-hero-content">
+        <span class="species-label">Gorilla gorilla and Gorilla beringei, Great Apes</span>
+        <h1>Gorillas</h1>
+        <p>Family groups, parenting, and protection.</p>
+      </div>
+    </div>
+
+    <div class="detail-body">
+      <div class="detail-main">
+        <section>
+          <h2>Who are gorillas?</h2>
+          <p>Gorillas are the largest living primates. They live in parts of Central and East Africa. Even though movies sometimes show them as scary or violent, gorillas are usually calm animals that spend a lot of time eating, resting, and staying close to their group.</p>
+          <p>They are important for anthropology because they show a different kind of primate social system than chimpanzees or bonobos.</p>
+        </section>
+
+        <figure class="detail-img">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Gorilla_498.jpg?width=1000" alt="Silverback gorilla sitting calmly" />
+          <figcaption>Gorillas are often organized around stable family groups and a dominant silverback.</figcaption>
+        </figure>
+
+        <section>
+          <h2>Family and protection</h2>
+          <p>Gorilla groups usually include a silverback male, adult females, and young gorillas. The silverback helps protect the group and often decides where the group moves or rests.</p>
+          <p>This does not mean the group is only about dominance. It is also about protection, parenting, and long-term relationships. Young gorillas learn by watching and playing, which is similar to how human children learn many social skills.</p>
+        </section>
+
+        <section>
+          <h2>Communication</h2>
+          <p>Gorillas communicate with sounds, facial expressions, gestures, and body language. Chest beating is one famous example, but they also use smaller signals during daily life.</p>
+          <p>Their communication shows that language did not appear out of nowhere in humans. Other primates also use signals to manage relationships and group life.</p>
+        </section>
+
+        <div class="anthro-highlight">
+          <h3>🎓 Anthropology Connection</h3>
+          <p>Gorillas connect to anthropology because they help us compare different primate social systems. They show how family structure, protection, parenting, and leadership can be important for survival.</p>
+        </div>
+      </div>
+
+      <aside class="detail-sidebar">
+        <div class="sticky-sidebar">
+          <div class="fact-card">
+            <h3>Quick Facts</h3>
+            <div class="fact-item"><div class="fact-icon">📍</div><div class="fact-text"><strong>Habitat</strong>Central and East African forests</div></div>
+            <div class="fact-item"><div class="fact-icon">⚖️</div><div class="fact-text"><strong>Size</strong>The largest living primates</div></div>
+            <div class="fact-item"><div class="fact-icon">👨‍👩‍👧</div><div class="fact-text"><strong>Social group</strong>Stable family groups led by a silverback</div></div>
+            <div class="fact-item"><div class="fact-icon">🥬</div><div class="fact-text"><strong>Diet</strong>Mostly leaves, stems, fruit, and bark</div></div>
+            <div class="fact-item"><div class="fact-icon">⚠️</div><div class="fact-text"><strong>Status</strong>Endangered or critically endangered, depending on the species</div></div>
+          </div>
+          <div class="dna-meter">
+            <h3>DNA Similarity to Humans</h3>
+            <div class="dna-percent">98%+</div>
+            <div class="dna-label">close genetic relationship</div>
+            <div class="dna-bar"><div class="dna-fill" style="width:98%"></div></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <div class="back-nav"><a class="back-btn" href="#" onclick="showPage('exhibit')">← Back to Exhibit</a></div>
+  </div>
+
+  <div id="detail-human" class="animal-detail">
+    <div class="animal-hero" style="background-image: url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1800&q=80')">
+      <div class="animal-hero-content">
+        <span class="species-label">Homo sapiens, Great Ape</span>
+        <h1>Humans</h1>
+        <p>Culture, language, and technology.</p>
+      </div>
+    </div>
+
+    <div class="detail-body">
+      <div class="detail-main">
+        <section>
+          <h2>Humans are primates</h2>
+          <p>Humans belong to the primate order and the great ape family. We are not descended from modern chimpanzees or gorillas, but we do share common ancestors with them.</p>
+          <p>This is important because it helps explain why humans share behaviors with other primates, like parenting, learning from others, forming groups, and building social relationships.</p>
+        </section>
+
+        <figure class="detail-img">
+          <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?auto=format&fit=crop&w=1000&q=80" alt="People spending time together" />
+          <figcaption>Humans are the most widespread primates, but we still carry many traits from our evolutionary past.</figcaption>
+        </figure>
+
+        <section>
+          <h2>What makes humans different?</h2>
+          <p>Humans have symbolic language, complex culture, art, religion, advanced technology, and large societies. Other primates can communicate and learn, but humans do this on a much larger scale.</p>
+          <p>One major difference is cumulative culture. Humans can build on past knowledge across generations, which is why tools, science, art, and technology can keep changing over time.</p>
+        </section>
+
+        <section>
+          <h2>What we still share</h2>
+          <p>Even with these differences, humans still share a lot with other primates. We form friendships, care for children, compete for status, cooperate in groups, and react strongly to unfairness or social conflict.</p>
+          <p>Studying primates helps make those behaviors easier to understand because it shows that some parts of human behavior have deep evolutionary roots.</p>
+        </section>
+
+        <section>
+          <h2>Why this matters today</h2>
+          <p>Many primates are threatened because of habitat loss, hunting, and human activity. Learning about primates is not only about the past. It also makes us think about our responsibility to other species today.</p>
+        </section>
+
+        <div class="anthro-highlight">
+          <h3>🎓 Anthropology Connection</h3>
+          <p>The human section connects the whole project. Biological anthropology helps explain our evolutionary connections, while cultural anthropology helps explain how humans turned primate behaviors into complex cultures, societies, and traditions.</p>
+        </div>
+      </div>
+
+      <aside class="detail-sidebar">
+        <div class="sticky-sidebar">
+          <div class="fact-card">
+            <h3>Quick Facts</h3>
+            <div class="fact-item"><div class="fact-icon">📍</div><div class="fact-text"><strong>Habitat</strong>Almost every environment on Earth</div></div>
+            <div class="fact-item"><div class="fact-icon">🗣️</div><div class="fact-text"><strong>Language</strong>Symbolic language with thousands of spoken languages</div></div>
+            <div class="fact-item"><div class="fact-icon">👥</div><div class="fact-text"><strong>Social life</strong>Families, communities, institutions, and nations</div></div>
+            <div class="fact-item"><div class="fact-icon">🍳</div><div class="fact-text"><strong>Diet</strong>Omnivore with huge cultural variation</div></div>
+          </div>
+          <div class="dna-meter">
+            <h3>Humans as Primates</h3>
+            <div class="dna-percent">100%</div>
+            <div class="dna-label">part of the primate order</div>
+            <div class="dna-bar"><div class="dna-fill" style="width:100%"></div></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <div class="back-nav"><a class="back-btn" href="#" onclick="showPage('exhibit')">← Back to Exhibit</a></div>
+  </div>
+
+  <footer>
+    <span class="footer-logo">Primates & Us</span>
+    <p>Created for Anthropology 110 Final UnEssay Project</p>
+  </footer>
+</div>
+
+<div id="page-about" class="page">
+  <section class="about-hero">
+    <h1>About This Project</h1>
+  </section>
+
+  <section class="about-body">
+    <h2>What is anthropology?</h2>
+    <p>Anthropology is the study of humans. It looks at where humans came from, how societies work, how cultures are different, and how people adapt to the world around them.</p>
+
+    <div class="subdisciplines">
+      <div class="subdiscipline">
+        <h3>🦴 Biological Anthropology</h3>
+        <p>Studies human evolution, genetics, fossils, and primates. This is the main area connected to this project.</p>
+      </div>
+      <div class="subdiscipline">
+        <h3>🏺 Cultural Anthropology</h3>
+        <p>Studies human cultures, beliefs, traditions, and social life in different communities.</p>
+      </div>
+      <div class="subdiscipline">
+        <h3>🔍 Archaeology</h3>
+        <p>Studies past human societies through material remains like tools, food remains, buildings, and art.</p>
+      </div>
+      <div class="subdiscipline">
+        <h3>🗣️ Linguistic Anthropology</h3>
+        <p>Studies language and how it connects to identity, culture, and social relationships.</p>
+      </div>
+    </div>
+
+    <h2>Why primates?</h2>
+    <p>Primates are useful in anthropology because they let us compare humans with other species that are related to us. If humans and other primates share a behavior, that behavior may have older evolutionary roots. If something is mostly human, then it helps us ask what changed in our own evolution.</p>
+    <p>This project is not saying humans are exactly the same as other animals. It is saying that studying primates helps us understand what makes humans similar and different.</p>
+
+    <h2>Why this matters today</h2>
+    <p>Primate conservation matters because many primate species are threatened by habitat loss, hunting, and the wildlife trade. Since humans are the species causing many of these problems, we also have a responsibility to help protect them.</p>
+
+    <div class="sources-box">
+      <h3>Sources and image credits to include in final write-up</h3>
+      <ul>
+        <li>American Museum of Natural History, Living Primates and Human Origins materials</li>
+        <li>Jane Goodall Institute, chimpanzee behavior and conservation materials</li>
+        <li>San Diego Zoo Wildlife Alliance, bonobo facts and conservation information</li>
+        <li>World Wildlife Fund, gorilla conservation information</li>
+        <li>Wikimedia Commons images for chimpanzee, bonobo, and gorilla photos</li>
+        <li>Unsplash images for homepage and human/social images</li>
+      </ul>
+    </div>
+  </section>
+
+<script src="script.js"></script>
+</body>
+</html>
